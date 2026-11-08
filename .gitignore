@@ -1,0 +1,61 @@
+# Runtime
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environment
+.venv/
+venv/
+env/
+.python-version
+
+# Environment files (must NEVER be committed)
+.env
+.env.*
+!.env.example
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets (key material)
+*.pem
+*.key
+*.pfx
+*.crt
+*.cer
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Local model weights and large model artifacts
+*.gguf
+*.gguf-*
+*.safetensors
+*.onnx
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.parquet
+*.msgpack
+models/
+model/

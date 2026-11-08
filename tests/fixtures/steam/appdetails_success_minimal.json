@@ -1,0 +1,18 @@
+{
+  "1245620": {
+    "success": true,
+    "data": {
+      "type": "game",
+      "name": "Aurora's Echo",
+      "release_date": {
+        "coming_soon": true,
+        "date": "Coming soon"
+      },
+      "platforms": {
+        "windows": true,
+        "mac": false,
+        "linux": false
+      }
+    }
+  }
+}

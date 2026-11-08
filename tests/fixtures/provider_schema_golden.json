@@ -1,0 +1,118 @@
+{
+  "_comment": "Structural golden of the provider-facing JSON Schema. The labels (the root title and the $defs keys) are replaced by placeholders, because the rename was allowed to change the labels and nothing else. Any change to the structure below is a change to the contract the provider is held to.",
+  "definition_names": [
+    "FieldVerification",
+    "TranslatedDescription"
+  ],
+  "structure": {
+    "$defs": {
+      "<LABEL_1>": {
+        "additionalProperties": false,
+        "description": "The translated Vietnamese description text and its metadata.\n\nThe verification status is **always** ``unverified``. A translation\nthat completed is not a fact that was checked: the contract enforces\nthis, so a payload that claims ``verified`` is rejected outright\nrather than being quietly downgraded.",
+        "properties": {
+          "evidence_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Evidence Ids",
+            "type": "array"
+          },
+          "language": {
+            "default": "vi",
+            "maxLength": 16,
+            "title": "Language",
+            "type": "string"
+          },
+          "text": {
+            "description": "The Vietnamese translation of the English source.",
+            "maxLength": 20000,
+            "minLength": 1,
+            "title": "Text",
+            "type": "string"
+          },
+          "verification": {
+            "$ref": "#/$defs/<LABEL_2>"
+          },
+          "within_target_range": {
+            "default": false,
+            "description": "True when the token count sits inside the soft target range. Server-owned, and purely informational.",
+            "title": "Within Target Range",
+            "type": "boolean"
+          },
+          "word_count": {
+            "default": 0,
+            "description": "The number of whitespace-separated tokens in the text. Server-owned: the model may not author it, and the service recomputes it from the text it ships.",
+            "minimum": 0,
+            "title": "Word Count",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "text"
+        ],
+        "title": "<LABEL_1>",
+        "type": "object"
+      },
+      "<LABEL_2>": {
+        "additionalProperties": false,
+        "description": "Verification state of a single field.\n\n``status`` defaults to ``\"unknown\"`` so a field that omits the\nobject entirely is treated as *nothing known* rather than *verified*.",
+        "properties": {
+          "checked_at": {
+            "anyOf": [
+              {
+                "maxLength": 64,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "ISO-8601 UTC timestamp of the last verification attempt, with an explicit UTC indicator (e.g. '2026-10-27T08:15:00+00:00'). Set only by the service, and only when a deterministic check actually ran: the presence of a timestamp is not proof that the check succeeded.",
+            "title": "Checked At"
+          },
+          "note": {
+            "anyOf": [
+              {
+                "maxLength": 500,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "Free-form note about the verification state. Never a fact.",
+            "title": "Note"
+          },
+          "status": {
+            "default": "unknown",
+            "description": "'verified' (checked against evidence), 'unverified' (a value exists but was never checked), 'conflicting' (sources disagree, no winner selected) or 'unknown' (nothing known).",
+            "enum": [
+              "verified",
+              "unverified",
+              "conflicting",
+              "unknown"
+            ],
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "title": "<LABEL_2>",
+        "type": "object"
+      }
+    },
+    "description": "The payload the model is asked to produce.\n\nIt contains the translated text and nothing else. Every other\nfield of the response - the deterministic Steam facts, the\ndescription-source block, the warnings - is owned by the service.",
+    "properties": {
+      "description": {
+        "$ref": "#/$defs/<LABEL_1>"
+      }
+    },
+    "required": [
+      "description"
+    ],
+    "title": "<LABEL_0>",
+    "type": "object"
+  },
+  "title": "DescriptionTranslationDraft"
+}

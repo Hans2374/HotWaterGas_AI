@@ -1,0 +1,26 @@
+# =============================================================================
+# HotWaterGas AI Service — Python dependencies
+# =============================================================================
+# Pin a known-good major.minor version range so the service is reproducible
+# while still receiving security patches. Tested with Python 3.12.
+# =============================================================================
+
+# Web framework
+fastapi>=0.115,<0.120
+
+# ASGI server
+uvicorn[standard]>=0.30,<0.40
+
+# Settings / config (Pydantic v2)
+pydantic>=2.7,<3.0
+pydantic-settings>=2.4,<3.0
+
+# .env file loading for local development
+python-dotenv>=1.0,<2.0
+
+# HTTP client (used by the Ollama provider and the Steam retriever)
+httpx>=0.27,<0.30
+
+# ── Test dependencies ──────────────────────────────────────────────────────
+pytest>=8.0,<9.0
+pytest-asyncio>=0.23,<1.0

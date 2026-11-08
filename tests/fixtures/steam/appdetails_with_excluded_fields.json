@@ -1,0 +1,83 @@
+{
+  "1245620": {
+    "success": true,
+    "data": {
+      "type": "game",
+      "name": "Aurora's Echo",
+      "release_date": {
+        "coming_soon": false,
+        "date": "Mar 25, 2022"
+      },
+      "platforms": {
+        "windows": true,
+        "mac": true,
+        "linux": false
+      },
+      "pc_requirements": {
+        "minimum": {
+          "os": "Windows 10 64-bit<br><strong>(64-bit)</strong>",
+          "processor": "Requires&nbsp;Intel&nbsp;Core i5",
+          "memory": "8&nbsp;GB RAM",
+          "graphics": "NVIDIA GTX 960",
+          "storage": "60&nbsp;GB"
+        },
+        "recommended": {
+          "os": "Windows 10 64-bit<br><strong>(64-bit)</strong>",
+          "processor": "Requires&nbsp;Intel&nbsp;Core i7",
+          "memory": "16&nbsp;GB RAM",
+          "graphics": "NVIDIA GTX 1080",
+          "storage": "60&nbsp;GB"
+        }
+      },
+      "mac_requirements": {
+        "minimum": {
+          "os": "macOS 12",
+          "processor": "Apple M1",
+          "memory": "16 GB RAM"
+        }
+      },
+      "linux_requirements": {
+        "minimum": {
+          "os": "Ubuntu 22.04",
+          "processor": "Intel Core i5",
+          "memory": "8 GB RAM"
+        }
+      },
+      "genres": [
+        { "genre_id": 1, "description": "Action" },
+        { "genre_id": 2, "description": "Adventure" }
+      ],
+      "categories": [
+        { "id": 2, "description": "Single-player" },
+        { "id": 28, "description": "Steam Achievements" }
+      ],
+      "is_free": true,
+      "price_overview": {
+        "initial": 599000,
+        "final": 599000,
+        "currency": "VND"
+      },
+      "packages": [
+        {
+          "packageid": 12345,
+          "name": "ELDEN RING",
+          "price": 599000
+        }
+      ],
+      "package_groups": [
+        { "name": "Buy ELDEN RING", "subs" : [ { "packageid": 12345 } ] }
+      ],
+      "dlc": [ 123456 ],
+      "fullgame": { "id": 1245620 },
+      "achievements": { "total": 42 },
+      "content_descriptors": { "ids": [ 2, 3 ] },
+      "website": "https://example.com/not-followed",
+      "support_info": { "url": "https://example.com/support" },
+      "background": "https://cdn.example.com/bg.jpg",
+      "header_image": "https://cdn.example.com/header.jpg",
+      "screenshots": [ { "path_full": "https://cdn.example.com/1.jpg" } ],
+      "movies": [ { "name": "Trailer" } ],
+      "metacritic": { "score": 96 }
+    }
+  }
+}

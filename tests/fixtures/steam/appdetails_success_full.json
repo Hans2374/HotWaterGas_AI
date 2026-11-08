@@ -1,0 +1,36 @@
+{
+  "1245620": {
+    "success": true,
+    "data": {
+      "type": "game",
+      "name": "ELDEN RING",
+      "short_description": "Một cuộc phiêu lưu hành động.",
+      "detailed_description": "<p>Một cuộc phiêu lưu hành động.</p>",
+      "release_date": {
+        "coming_soon": false,
+        "date": "Feb 25, 2022"
+      },
+      "platforms": {
+        "windows": true,
+        "mac": false,
+        "linux": false
+      },
+      "pc_requirements": {
+        "minimum": {
+          "os": "Windows 10 64-bit",
+          "processor": "Intel Core i5-4460",
+          "memory": "12 GB RAM",
+          "graphics": "GTX 1050 Ti",
+          "storage": "60 GB"
+        },
+        "recommended": {
+          "os": "Windows 10 64-bit",
+          "processor": "Intel Core i7-6700K",
+          "memory": "16 GB RAM",
+          "graphics": "GTX 1080 Ti",
+          "storage": "60 GB"
+        }
+      }
+    }
+  }
+}
